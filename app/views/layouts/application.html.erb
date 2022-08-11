@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+  <nav class="navbar bg-light">
+    <div class="container-fluid px-3">
+      <%= link_to "Watch List", movies_path, class: "navbar-brand fw-bold text-dark" %>
+      <div class="text-end">
+      <%= link_to "All movies", movies_path, class: "fs-6 text-dark btn btn-danger text-white" %>
+      <%= link_to "All lists", lists_index_path, class: "fs-6 text-dark btn btn-primary text-white" %>
+      <%= link_to "Add bookmark", bookmarks_new_path, class: "fs-6 text-dark btn btn-success text-white" %>
+      </div>
+    </div>
+  </nav>
+    <div class="container py-5">
+     <%= yield %>
+    </div>
   </body>
 </html>

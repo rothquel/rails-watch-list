@@ -1,0 +1,17 @@
+<h1 class="text-center"><%= @list.name %></h1>
+<p class="text-center pb-3"><%= link_to "Back to all lists", lists_path, class: "btn btn-outline-primary" %> <%= link_to "Add a new movie to this list", bookmarks_new_path, class: "btn btn-primary" %></p>
+<div class="row">
+  <% @list.bookmarks.each do |item| %>
+    <div class="card col-3 p-3 m-5">
+      <p class="card-text"><strong>Added to list on:</strong> <%= item.created_at.strftime("%b %d %Y") %></p>
+      <p class="card-text"><strong>Comment:</strong> <%= item.comment %></p>
+      <img src=<%= item.movie.poster_url %> class="card-img-top" alt="<%= item.movie.title %>">
+      <div class="card-body">
+      <h5 class="card-title fw-bold"><%= item.movie.title %></h5>
+      <p class="card-text"><%= item.movie.overview %></p>
+      <p class="card-text">Rating: <strong><%= item.movie.rating %> ⭐️</strong></p>
+      <a href="#" class="btn btn-primary">View more</a>
+      </div>
+    </div>
+  <% end %>
+</div>
