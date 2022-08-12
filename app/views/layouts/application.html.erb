@@ -11,20 +11,22 @@
   </head>
 
   <body>
-  <nav class="navbar bg-light">
-    <div class="container p-3">
-      <%= link_to "Watch List", root_path, class: "navbar-brand fw-bold text-dark h2" %>
-      <div class="text-end">
-      <%= link_to "All movies", movies_path, class: "fs-6 text-dark pe-5 text-decoration-none" %>
-      <%= link_to "All lists", lists_index_path, class: "fs-6 text-dark pe-5 text-decoration-none" %>
-      <%= link_to "Add bookmark", bookmarks_new_path, class: "fs-6 text-dark text-decoration-none" %>
+    <nav class="navbar bg-light">
+      <div class="container p-3">
+        <%= link_to "Watchlist", root_path, class: "navbar-brand fw-bold text-dark h2" %>
+        <div class="text-end">
+        <%= link_to "All movies", movies_path, class: "fs-6 text-dark pe-5 text-decoration-none" %>
+        <%= link_to "All lists", lists_index_path, class: "fs-6 text-dark pe-5 text-decoration-none" %>
+        <%= link_to "Add bookmark", bookmarks_new_path, class: "fs-6 text-dark text-decoration-none" %>
+        </div>
       </div>
+    </nav>
+    <div class="fullpage">
+      <%= yield %>
     </div>
-  </nav>
-     <%= yield %>
-    <div class="row-fluid bg-dark py-5 text-center text-light fixed-bottom">
-    <h3 class="pt-3">Watchlist</h3>
-    <p>Made with <i class="fas fa-heart"></i> in Montreal</p>
+    <div class="row-fluid bg-dark py-3 text-center text-light">
+      <h4 class="pt-3">Watchlist</h4>
+      <p class="tiny">Made with <i class="fas fa-heart"></i> in Montreal</p>
     </div>
   </body>
 </html>

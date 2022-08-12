@@ -1,0 +1,25 @@
+<div class="homebanner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dg7mx0hnl/image/upload/v1660334694/karen-zhao-jLRIsfkWRGo-unsplash_ldx6ih.jpg');">
+  <div class="container">
+    <h1 class="text-center pb-3 display-1">Welcome to Watchlist</h1>
+    <p>A place for movie lovers</p>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="row">
+    <div class="col">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dg7mx0hnl/image/upload/v1660334533/jakob-owens-CiUR8zISX60-unsplash_kpets9.jpg)">
+        <%= link_to "See all movies", movies_path %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dg7mx0hnl/image/upload/v1660335233/tech-daily-PGuCnUzsRSM-unsplash_hoxvom.jpg)">
+        <%= link_to "See all lists", lists_index_path %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dg7mx0hnl/image/upload/v1660335241/jeshoots-com-PpYOQgsZDM4-unsplash_w0ammt.jpg)">
+        <%= link_to "Add a bookmark", bookmarks_new_path %>
+      </div>
+    </div>
+  </div>
+</div>
