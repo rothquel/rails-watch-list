@@ -10,7 +10,9 @@
       <h5 class="card-title fw-bold"><%= item.movie.title %></h5>
       <p class="card-text"><%= item.movie.overview %></p>
       <p class="card-text">Rating: <strong><%= item.movie.rating %> ⭐️</strong></p>
-      <a href="#" class="btn btn-primary">View more</a>
+      <div class="row">
+        <%= link_to "Remove from list", bookmark_path(item), class: "btn btn-sm btn-danger text-white", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
       </div>
     </div>
   <% end %>
