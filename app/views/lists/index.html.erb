@@ -1,10 +1,13 @@
 <h1 class="text-center fw-bold pb-3">All lists</h1>
 <p class="text-center pb-3"><%= link_to "Add new list", new_list_path %></p>
-<ul class="list-group">
+<ul class="row justify-content-evenly">
   <% @lists.each do |list| %>
-    <li class="list-group-item">
+    <%# <li class="list-group-item">
       <%= link_to list.name, list_path(list) %>
-    </li>
-  <% end %>
+    <%# </li> %>
+    <div class="card-category col-3 m-3 text-white" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>')">
+      <%= link_to list.name, list_path(list) %>
+    </div>
 
+  <% end %>
 </ul>
