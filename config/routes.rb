@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "movies#home"
+  root to: 'movies#home'
   get 'bookmarks/new'
   get 'bookmarks/create'
   get 'bookmarks/destroy'
