@@ -28,6 +28,11 @@
 
 .card-category a {
   color: #ffffff;
+  transition: 0.5s
+}
+
+.card-category a:hover {
+  color: #ffa200;
 }
 
 a {
@@ -86,4 +91,13 @@ a {
 
 .tiny {
   font-size: 8px;
+}
+
+.navlink {
+  color: #333333;
+  transition: 0.5s;
+}
+
+.navlink:hover {
+  color: #ffa200;
 }
